@@ -1,0 +1,195 @@
+/* Common styles for both mobile and laptop */
+.login_pop_main {
+    background-color: #252d38;
+    background-image: url('./assets/bg_log_pop.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+dialog {
+    height: 90%;
+    background-color: #1b1f2c;
+    box-shadow: 0 15px 25px #03e9f4;
+    color: #a8c4ce;
+    border: 0;
+    border-radius: 10px;
+    animation: move-in 0.3s;
+    overflow: auto;
+}
+
+/* Hide scrollbar */
+dialog::-webkit-scrollbar {
+    display: none;
+}
+
+h3 {
+    font-size: 18px;
+    color: #e98024;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+dialog h2,
+dialog h5 {
+    text-align: center;
+    margin: 0;
+}
+
+dialog button {
+    border: 0;
+    color: black;
+    background-color: hsl(240deg 37% 97%);
+    border-radius: 8px;
+    text-transform: none;
+}
+
+dialog .login_now {
+    background-color: hsl(133, 84%, 51%);
+}
+
+dialog button:is(:hover, :focus) {
+    background-color: hsl(240deg 37% 87%);
+}
+
+dialog::backdrop {
+    background-color: rgba(46, 50, 82, 0.7);
+    animation: fade-in 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        backdrop-filter: blur(8px);
+    }
+}
+
+@keyframes move-in {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.items_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 15px 0; /* Adjust margin as needed */
+}
+
+.items_list .item {
+    display: flex;
+    gap: 0.75rem;
+    margin-left: 15px; /* Adjust margin as needed */
+}
+
+.items_list .item svg {
+    font-size: 18px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 767px) {
+    dialog {
+        width: 100%;
+    }
+}
+
+/* Media query for laptop */
+@media screen and (min-width: 768px) {
+    dialog {
+        width: 50%;
+    }
+}
+
+/*button css*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-85 {
+    background: linear-gradient(45deg, red, blue, lime);
+    color: #fff;
+}
+
+
+.youtube-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.h5 {
+    font-size: 18px;
+    color: #e98024;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* TAB Switcher CSS [Codebeany]*/
+.active_tab {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.inactive_tab {
+    display: block;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, height 0s 0.3s;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (min-width: 320px) and (max-width: 719px) {
+    .iframe-container {
+        height: 100vh;
+    }
+}

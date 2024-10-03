@@ -1,0 +1,17 @@
+// https://blockly-demo.appspot.com/static/demos/blockfactory/index.html#2jo335
+import { translate } from '@i18n';
+import { mainScope } from '../../relationChecker';
+
+Blockly.Blocks.lastDigitList = {
+    init: function init() {
+        this.appendDummyInput().appendField(translate('Last Digit List'));
+        this.setOutput(true, 'Array');
+        this.setColour('#dedede');
+        this.setTooltip(translate('Returns the list of last digit values'));
+        this.setHelpUrl('https://github.com/binary-com/binary-bot/wiki');
+    },
+    onchange: function onchange(ev) {
+        mainScope(this, ev, 'Last Digit List');
+    },
+};
+Blockly.JavaScript.lastDigitList = () => ['Bot.getLastDigitList()', Blockly.JavaScript.ORDER_ATOMIC];

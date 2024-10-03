@@ -1,0 +1,79 @@
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    font-weight: 700;
+    height: 100%;
+    align-items: stretch
+    
+}
+
+// inline-icons
+
+/*
+    to use styles without modifier class on .inline-icon
+    use @extend
+
+    e.g. style icon on parent hover:
+        a:hover .inline-icon {
+            @extend %inline-icon.active;
+        }
+*/
+
+%inline-icon {
+    @include colorIcon(var(--text-general), none);
+
+    &.active {
+        @include colorIcon(var(--text-prominent), none);
+    }
+
+    &.disabled {
+        @include colorIcon(var(--text-disabled), none);
+    }
+
+    &.white {
+        @include colorIcon(var(--text-prominent));
+    }
+
+    &.border_hover_color {
+        @include colorIcon(var(--text-prominent));
+    }
+
+    &.secondary {
+        @include colorIcon(var(--text-less-prominent));
+    }
+}
+
+.btn {
+    @include deriv-btn('default', null);
+
+    &--primary {
+        @include deriv-btn(null, 'primary');
+    }
+
+    &--secondary {
+        @include deriv-btn(null, 'secondary');
+    }
+
+    &--tertiary {
+        @include deriv-btn(null, 'tertiary');
+    }
+
+    &--link {
+        @include deriv-btn(null, 'link');
+    }
+
+    &__small {
+        @include deriv-btn('small', null);
+    }
+
+    &__large {
+        @include deriv-btn('large', null);
+    }
+}
+
+.content-row {
+    overflow-x: auto;
+    background-color: #fff;
+}

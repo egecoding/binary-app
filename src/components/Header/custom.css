@@ -1,0 +1,191 @@
+.custom-logo {
+    display: flex;
+    align-items: center;
+    color: #000;
+    gap: 5px;
+}
+
+.custom-logo .sub_content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.custom-logo .sub_content h2 {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+}
+
+.custom-logo .sub_content p {
+    font-size: 12px;
+}
+
+.custom-logo .sub_content p span {
+    color: #ff444f;
+}
+
+
+
+/* Account DropDown Styles */
+.select-menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-menu .select-btn {
+    display: flex;
+    gap: 0.7rem;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    white-space: nowrap;
+    margin-right: 35%;
+}
+
+.select-btn .active_account_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-btn .active_account_info .sBtn-text0 {
+    font-size: 12px;
+}
+
+.select-btn .active_account_info .sBtn-text {
+    font-size: 14px;
+}
+
+.select-btn svg {
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.select-menu.active .select-btn svg {
+    transform: rotate(-180deg);
+}
+
+.select-menu .options {
+    position: absolute;
+    top: 45px;
+    right: -8%;
+    /* width: 135%; */
+    z-index: 300;
+    margin-top: -3.5px;
+    margin-right: 10%;
+    border-radius: 8px;
+    background: #000;
+    box-shadow: 3px #000;
+    display: none;
+}
+
+.select-menu.active .options {
+    display: block;
+}
+
+.select-menu.active .options ul{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.options ul {
+    padding: 0px 12px;
+}
+
+.options .option {
+    display: flex;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 8px;
+    align-items: center;
+    color: #a8c4ce;
+}
+
+.options .option:hover {
+    color: #f2f2f2;
+}
+
+.option i {
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.option .option-text {
+    font-size: 14px;
+}
+
+.header .account__switcher-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 13px;
+    padding-right: 0;
+    cursor: pointer; 
+}
+
+
+/* TAB Switcher CSS [Codebeany]*/ 
+.tab_switcher {
+    display: flex;
+    gap: 1rem;
+    font-size: 14px;
+    margin: 2px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.tab_switcher div {
+    position: relative;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.tab_switcher div::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.tab_switcher .active::after {
+    background-color: rgb(0, 128, 0);
+    transform: scaleX(1);
+}
+
+/* Optional: Add hover effect */
+.tab_switcher div:hover::after {
+    background-color: rgb(144, 238, 144);
+    transform: scaleX(1);
+}
+
+@media (min-width: 320px) and (max-width: 719px){
+    .select-menu .options{
+        right: -4%;
+    }
+
+    .custom-logo .powerd_deriv{
+        display: none;
+    }
+}
+
+
+

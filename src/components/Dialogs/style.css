@@ -1,0 +1,237 @@
+.main_toolbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.main_toolbox .add_tokens {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    align-items: center;
+}
+
+.main_toolbox .switcher {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main_toolbox .switcher .on_off_switch {
+    display: flex;
+    align-items: center;
+}
+
+.main_toolbox .switcher input[type='checkbox'] {
+    position: relative;
+    opacity: 1;
+    -webkit-appearance: checkbox;
+    appearance: auto;
+}
+
+.main_toolbox .switcher .sync_btn {
+    padding: 4px 6px;
+}
+
+.main_toolbox .switcher .sync_btn svg{
+    font-size: 15px;
+}
+
+.main_toolbox .add_tokens input {
+    background: white;
+    padding: 10px;
+    border-color: #000;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.main_toolbox .all_tokens {
+    width: 90%;
+    padding: 1rem 1rem;
+    max-height: 200rem;
+    color: #000;    
+    background: #dedede;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.main_toolbox .all_tokens::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main_toolbox .all_tokens::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.main_toolbox .all_tokens::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.main_toolbox .all_tokens ul {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main_toolbox .all_tokens ul li {
+    background: #b6b1b1;
+    border-color: #000;
+    padding: 6px;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_toolbox .all_tokens ul li span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    padding: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.main_toolbox .all_tokens ul li span svg {
+    font-size: 20px;
+    color: darkred;
+}
+
+
+/* =========== Account Switcher CSS ======================== */
+.account__switcher-container{
+       /* width: 100%; */
+       padding: 0;
+       display: flex;
+       flex-direction: column;
+}
+
+.account__switcher-tabs{
+    display: flex;
+    height: 36px;
+    margin: initial;
+    /* padding: 0 !important; */
+    border-bottom: 1px solid var(--general-section-1);
+    background: var(--general-main-2);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.account__switcher-tab{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    float: none;
+    align-items: center;
+    margin: initial;
+    cursor: pointer;
+}
+
+.account__switcher-tab.ui-tabs-active{
+    border-bottom: solid 1.5px var(--color-driv-red) !important;
+    cursor: default;
+}
+
+.account__switcher-tabs-content{
+    padding: 0 !important;
+}
+
+.account__switcher-accordion{
+    padding: 4px 8px;
+}
+
+.account__switcher-accordion h3.ui-state-default, .account__switcher-accordion h3.ui-state-active{
+    background-image: none;
+    background-color: var(--general-main-2);
+    color: var(--text-prominent);
+    font-weight: 600;
+    font-size: var(--font-size-n);
+    line-height: 1.75;
+    border: none;
+    padding: 0;
+    /* margin: initial; */
+}
+
+.account__switcher-accordion-header-text{
+    width: 95%;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account__switcher-acc:hover {
+    color: green;
+}
+
+.header__expand.open{
+    transform: rotate(180deg);
+    transition: transform 500ms;
+}
+
+.header__expand{
+    transition: transform 500ms;
+}
+
+.account__switcher-accordion .ui-accordion-header{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 2px 0 0;
+    padding: 0.5em 0.5em 0.5em 0.7em;
+    min-height: 0;
+    font-size: 100%;
+}
+
+.account__switcher-list.open{
+    display: block;
+}
+
+.account__switcher-list{
+    padding: 0 !important;
+    border: 0 !important;
+    display: none;
+}
+
+.account__switcher-acc{
+    display: flex;
+    align-items: center;
+    padding: 3px 16px;
+    border-radius: 3px;
+    font-size: var(--font-size-s);
+    cursor: pointer;
+}
+
+input, select, textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    padding: 2px 8px;
+    border: 1px solid #dedede;
+    color: #000;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.account__switcher-tabs-content.hide{
+    display: none;
+}
+
+.account__switcher-tabs-content{
+    padding: 0 !important;
+}
+

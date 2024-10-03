@@ -1,0 +1,126 @@
+@import '../../assets/css/variables';
+@import '../../assets/css/mixins';
+@import '../../assets/css/common';
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: opacity 0.3s;
+    backface-visibility: hidden;
+    background: #2a3052;
+    color: white;
+    border-top: 1px solid var(--general-section-1);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-stack);
+
+    &--is-disabled {
+        border-top: none;
+
+        &:after {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &__icon-separator {
+        width: 2px;
+        height: 1.6em !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin: 0 0.1em;
+    }
+
+    &__icon-separat {
+        width: 5px;
+        height: 1.6em !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: grey;
+        margin: 0 0.1em;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-evenly; /* Adjust spacing between links */
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+
+        &--left {
+            margin-right: auto;
+        }
+
+        .footer__link {
+            margin: 0 10px; /* Adjust the margin to add space between links */
+        }
+
+        div {
+            height: inherit;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+        }
+    }
+
+    &__link,
+    &__link:visited {
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+            background: var(--general-hover);
+
+            .footer__icon {
+                @extend %inline-icon;
+            }
+        }
+
+        .footer__icon {
+            width: 3em;
+            height: 3em;
+            margin: 0.9em; /* Increase the margin to add spacing */
+        }
+    }
+
+    &__icon {
+        width: 3em;
+        height: 3em;
+        margin: 0.9em; /* Increase the margin to add spacing */
+    }
+
+    @media (max-width: 4000px) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+
+        &__links {
+            margin-top: 0.5em;
+        }
+
+        &__icon-separator {
+            display: none;
+        }
+
+        &__icon {
+            width: 3em;
+            height: 3em;
+            margin: 0.9em; /* Increase the margin for mobile */
+        }
+    }
+}
+
+a, a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}

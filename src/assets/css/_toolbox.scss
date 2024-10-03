@@ -1,0 +1,56 @@
+#toolbox {
+    background-color: #2a3052 ;
+    border-bottom: 2px solid #fff;
+    padding: 0 3px;
+    z-index: 0;
+    overflow: auto;
+
+    #runButton[disabled],
+    #runButton[disabled]:hover,
+    #stopButton[disabled],
+    #stopButton[disabled] {
+        @include toolbox-runButton-disabled;
+    }
+
+    .toolbox-button {
+        @include toolbox-button-base;
+    }
+
+    .toolbox-button:hover {
+        @include toolbox-runButton-hover;
+    }
+
+    .toolbox-button:focus {
+        @include toolbox-button-focus;
+    }
+
+    .box.is-dragover {
+        background-color: grey;
+    }
+
+    .toolbox-separator {
+        background-color: black;
+        display: inline-block;
+        height: 18px;
+        margin: 0 3px;
+        user-select: none;
+        width: 1px;
+    }
+    .toolbox-hide {
+        display: none;
+    }
+}
+
+button {
+    & > .barspinner.white {
+        position: relative;
+        margin: 3px auto;
+        height: 13px;
+        top: initial;
+        left: initial;
+    }
+}
+.barspinner.dark > div {
+    background-color: orangered;
+    height: 30px;
+}

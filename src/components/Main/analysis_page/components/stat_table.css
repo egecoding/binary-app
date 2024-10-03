@@ -1,0 +1,108 @@
+input[type="checkbox"] {
+    appearance: auto;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    z-index: 2;
+}
+
+.top_container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+    padding: 3px;
+    border-radius: 2px 2px 0px 0px;
+    cursor: move;
+}
+
+.close-icon {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.scrollable-table {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.contract-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    background: #2a3052;
+}
+
+.contract-table th,
+.contract-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.contract-table th {
+    background-color: #2a3052;
+    font-weight: bold;
+}
+
+.status-cell {
+    text-align: center;
+}
+
+.won-icon {
+    color: green;
+    font-size: 24px;
+}
+
+.loss-icon {
+    color: red;
+    font-size: 24px;
+}
+
+.pending-icon {
+    font-size: 24px;
+}
+
+.profit {
+    color: green;
+}
+
+.loss {
+    color: red;
+}
+
+.bottom_container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+    /* padding: 3px; */
+    text-align: center;
+    border-radius: 0px 0px 2px 2px;
+    cursor: move;
+    /* font-size: 10px; */
+}
+
+.bottom_container h3{
+    color: #000;
+    margin: 0;
+    padding: 4px;
+    font-size: 16px;
+    margin-right: 8%;
+}
+
+
+@media (max-width: 768px) {
+    .table-container {
+      font-size: 14px;
+      width: 110%;
+    }
+  }
